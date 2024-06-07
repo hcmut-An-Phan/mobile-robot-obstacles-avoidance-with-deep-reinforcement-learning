@@ -1,0 +1,29 @@
+20 random test at train environment
+PER2: 
+    ep 200:   Finish 20 missions with 0 collision in 9345 steps, time: 0:16:55
+
+PER1:
+
+ORG_human:
+
+ORG:
+
+
+40 fix test at test environment
+PER2: 
+    ep 200: Finish 40 missions with 0 collision in 19834, steps, time: 0:36:02
+
+
+PER1:
+    ep 240: Finish 40 missions with 0 collision in 17754 steps, time: 0:32:21
+
+
+ORG_human:
+    ep 190: Finish 40 missions with 2 collision in 18568 steps, time: 0:33:42
+
+
+ORG:
+    ep 290: Finish 40 missions with 28 collision in 12372 steps, time: 0:22:38
+    ep 150: Finish 40 missions with 17 collision in 18340 steps, time: 0:34:45
+    ep 110: Finish 40 missions with 8  collision, time out 9  in 19449 steps, time:0:35:28
+    ep 120: Finish 40 missions with 12 collision, time out 1, in 14614 steps, time: 26:32
