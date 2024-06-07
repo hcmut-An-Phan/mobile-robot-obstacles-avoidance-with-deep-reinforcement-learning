@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <!-- TEST PLUGIN GAZEBO_DIFF_DRIVE -->
+    <gazebo>
+        <plugin name="gazebo_diff_drive" filename="libgazebo_ros_diff_drive.so">
+            <!-- Wheel Information -->
+            <left_joint>wheel_left_joint</left_joint>
+            <right_joint>wheel_right_joint</right_joint>
+            <wheel_separation>0.287</wheel_separation>
+            <wheel_diameter>0.066</wheel_diameter>
+
+            <!-- Limits -->
+            <max_wheel_torque>20</max_wheel_torque>
+            <max_wheel_acceleration>5</max_wheel_acceleration>
+
+            <!-- Output -->
+            <odometry_frame>odom</odometry_frame>
+            <robot_base_frame>base_footprint</robot_base_frame>
+
+            <publish_odom>true</publish_odom>
+            <publish_odom_tf>true</publish_odom_tf>
+            <publish_wheel_tf>true</publish_wheel_tf>
+        </plugin>
+    </gazebo>
+</robot>
