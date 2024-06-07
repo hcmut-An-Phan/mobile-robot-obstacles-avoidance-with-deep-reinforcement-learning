@@ -1,0 +1,57 @@
+ekf_filter_node:
+    ros__parameters:
+      frequency: 50.0
+      two_d_mode: true
+      publish_tf: true
+
+      map_frame: map
+      odom_frame: odom
+      base_link_frame: base_footprint_ekf
+      world_frame: odom
+
+      odom0: /turtlebot3/odom_noisy
+      odom0_differential: true 
+
+      imu0: imu_broadcaster/imu
+      imu0_differntial: true 
+
+      # If you're having trouble, try setting this to true, and then echo the /diagnostics_agg topic to see if the node is unhappy with any settings or data.
+      print_diagnostics: true
+
+      # POSITION          [x_pos    , y_pos     , z_pos, 
+      # ORIENTATION        roll     , pitch     , yaw,
+      # LINEAR_VEL         x_vel    , y_vel     , z_vel,
+      # ANGULAR_VEL        roll_vel , pitch_vel , yaw_vel,
+      # ACCELARATION       x_accel  , y_accel   , z_accel]
+      # false = filter
+      # true = use directly
+
+      odom0_config: [false, false, false,
+                     false, false, false,
+                     true , true, false,
+                     false, false, false,
+                     false, false, false]
+
+      imu0_config: [false, false, false,
+                    false, false, false,
+                    false, false, false,
+                    false, false, true,
+                    true , false, false]
+
+      # LIDAR BOT
+      # odom0_config: [ false, false, false,
+      #                 false, false, false,
+      #                 true, true, false, 
+      #                 false, false, true,
+      #                 false, false, false]
+
+      # imu0_config: [false, false, false, 
+      #               false, false, false, 
+      #               false, false, false,
+      #               false, false, true, 
+      #               true, false, false]
+
+      # let default value
+      # process_noise_covariance: []
+      # initial_estimate_covariance: []
+
